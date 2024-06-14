@@ -11,5 +11,8 @@ apache-airflow
 evidently
 plotnine
 FastAPI
+optuna
+nbformat # required for visualization using optuna
+
 
 -e .
