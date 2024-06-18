@@ -1,6 +1,6 @@
 from src.irisclassification.pipelines.prediction_pipeline import CustomData, PredictPipeline
 
-from flask import Flask,request,render_template,jsonify
+from flask import Flask, request, render_template, jsonify
 
 
 app=Flask(__name__)
