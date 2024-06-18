@@ -46,7 +46,7 @@ class CustomData:
                 custom_data_input_dict = {
                     'SepalLengthCm':[self.SepalLengthCm],
                     'SepalWidthCm':[self.SepalWidthCm],
-                    'PetalLengthCm':[self.tabPetalLengthCm],
+                    'PetalLengthCm':[self.PetalLengthCm],
                     'PetalWidthCm':[self.PetalWidthCm]
                 }
                 df = pd.DataFrame([custom_data_input_dict])
