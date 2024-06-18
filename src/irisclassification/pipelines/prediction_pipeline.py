@@ -22,7 +22,7 @@ class PredictPipeline:
             
             pred = model.predict(scaled_data)
             
-            return pred                                     # This should return string
+            return pred[0]                                   
         
         except Exception as e:
             raise customexception(e, sys)
@@ -49,7 +49,7 @@ class CustomData:
                     'PetalLengthCm':[self.tabPetalLengthCm],
                     'PetalWidthCm':[self.PetalWidthCm]
                 }
-                df = pd.DataFrame(custom_data_input_dict)
+                df = pd.DataFrame([custom_data_input_dict])
                 logging.info('Dataframe Gathered')
                 return df
             except Exception as e:

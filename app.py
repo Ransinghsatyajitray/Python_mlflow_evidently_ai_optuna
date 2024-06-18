@@ -11,14 +11,13 @@ def home_page():
     return render_template("index.html")
 
 
-@app.route("/predict", methods=["GET","POST"])
+@app.route("/predict", methods=["GET", "POST"])
 def predict_datapoint():
     if request.method == "GET":
         return render_template("form.html")
     
     else:
         data=CustomData(
-            
             SepalLengthCm = float(request.form.get('SepalLengthCm')),
             SepalWidthCm = float(request.form.get('SepalWidthCm')),
             PetalLengthCm = float(request.form.get('PetalLengthCm')),
@@ -29,11 +28,10 @@ def predict_datapoint():
         
         predict_pipeline = PredictPipeline()
         
-        pred=predict_pipeline.predict(final_data)
+        pred = predict_pipeline.predict(final_data)
+                                                   
         
-        result=pred                                                             # Some issue here XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        
-        return render_template("result.html",final_result=result)
+        return render_template("result.html", final_result=pred)
 
 #execution begin
 if __name__ == '__main__':
