@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/HCL_IKEA_4_Excercise/Exercise_1_Mlflow/Ex_1_2_Python_mlflow_docker/Python_mlflow_evidently_ai_optuna/notebooks/mlruns/0/4da03ff6c3b64697b18ef19571a8ca50/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4da03ff6c3b64697b18ef19571a8ca50
+run_name: iris_classification
+run_uuid: 4da03ff6c3b64697b18ef19571a8ca50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718604858975
+status: 1
+tags: []
+user_id: Ransingh
