@@ -49,7 +49,7 @@ class ModelTrainer:
             # best model and parameters
             best_model_report = model_report["best_clf_model"]
 
-            logging.info(f'Best Model Found , Model Name : {best_model_report}') # log the classification scores
+            logging.info(f'Best Model Found , Model Name : {best_model_report}') # log the classification scores and report
 
             # from the utils.py (utility)
             save_object(
