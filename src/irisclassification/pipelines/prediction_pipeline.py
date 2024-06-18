@@ -18,11 +18,11 @@ class PredictPipeline:
             preprocessor = load_object(preprocessor_path)
             model = load_object(model_path)
             
-            scaled_data = preprocessor.fit_transform(features)
+            scaled_data = preprocessor.transform(features)            
             
             pred = model.predict(scaled_data)
             
-            return pred[0]                                   
+            return pred                                   
         
         except Exception as e:
             raise customexception(e, sys)
@@ -44,10 +44,10 @@ class CustomData:
     def get_data_as_dataframe(self):
             try:
                 custom_data_input_dict = {
-                    'SepalLengthCm':[self.SepalLengthCm],
-                    'SepalWidthCm':[self.SepalWidthCm],
-                    'PetalLengthCm':[self.PetalLengthCm],
-                    'PetalWidthCm':[self.PetalWidthCm]
+                    'SepalLengthCm':self.SepalLengthCm,
+                    'SepalWidthCm':self.SepalWidthCm,
+                    'PetalLengthCm':self.PetalLengthCm,
+                    'PetalWidthCm':self.PetalWidthCm
                 }
                 df = pd.DataFrame([custom_data_input_dict])
                 logging.info('Dataframe Gathered')
