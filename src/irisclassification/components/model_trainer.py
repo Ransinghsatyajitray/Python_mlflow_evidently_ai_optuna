@@ -58,7 +58,6 @@ class ModelTrainer:
             
             # extracting the best parameters
             best_param = model_report["best_clf_model"]["Best Parameters"]
-            
 
             # from the utils.py (utility)
             save_object(
