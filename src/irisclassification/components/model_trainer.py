@@ -50,11 +50,21 @@ class ModelTrainer:
             best_model_report = model_report["best_clf_model"]
 
             logging.info(f'Best Model Found , Model Name : {best_model_report}') # log the classification scores and report
+            
+            
+            
+            # extracting the best model
+            best_model = models[model_report["best_clf_model"]["Model"]]
+            
+            # extracting the best parameters
+            best_param = model_report["best_clf_model"]["Best Parameters"]
+            
 
             # from the utils.py (utility)
             save_object(
                  file_path=self.model_trainer_config.trained_model_file_path,
-                 obj = best_model_report                   
+                 # using dictionary unpacking to consume the parameters
+                 obj = best_model.set_params(**best_param)                                 
             )
 
         except Exception as e:

@@ -1,0 +1,29 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="SepalLengthCm">SepalLengthCm:</label>
+        <input type="text" id="SepalLengthCm" name="SepalLengthCm" placeholder="Enter SepalLengthCm value (float)">
+    </div>
+
+    <div class="form-group">
+        <label for="SepalWidthCm">SepalWidthCm:</label>
+        <input type="text" id="SepalWidthCm" name="SepalWidthCm" placeholder="Enter SepalWidthCm value (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="PetalLengthCm">PetalLengthCm:</label>
+        <input type="text" id="PetalLengthCm" name="PetalLengthCm" placeholder="Enter PetalLengthCm value (float)">
+    </div>
+    
+    <div class="form-group">
+        <label for="PetalWidthCm">PetalWidthCm:</label>
+        <input type="text" id="PetalWidthCm" name="PetalWidthCm" placeholder="Enter PetalWidthCm value (float)">
+    </div>
+  
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
