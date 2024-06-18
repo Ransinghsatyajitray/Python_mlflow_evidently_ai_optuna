@@ -22,7 +22,7 @@ class PredictPipeline:
             
             pred = model.predict(scaled_data)
             
-            return pred
+            return pred                                     # This should return string
         
         except Exception as e:
             raise customexception(e, sys)
