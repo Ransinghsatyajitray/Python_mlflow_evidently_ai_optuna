@@ -67,9 +67,9 @@ def evaluate_model(models_clf, param_grids, X_train, y_train, X_test, y_test):
         
         
         for name, model in models_clf.items():
-
+            print("--"*20 + f"Evaluating {name}"+"--"*20)
             # Grid Search multi class
-            grid_search = GridSearchCV(model, param_grid=param_grids[name], scoring='f1_weighted', cv=10) 
+            grid_search = GridSearchCV(model, param_grid=param_grids[name], scoring ='f1_weighted', cv=10) 
             grid_search.fit(X_train, y_train)
 
             # Best Model & Predictions
@@ -79,7 +79,6 @@ def evaluate_model(models_clf, param_grids, X_train, y_train, X_test, y_test):
             # Evaluation for multiclass classification
             accuracy = accuracy_score(y_test, y_pred)
             precision = precision_score(y_test, y_pred, average='weighted')
-            
             recall = recall_score(y_test, y_pred, average='weighted')
             f1 = f1_score(y_test, y_pred, average='weighted')
             
@@ -105,7 +104,11 @@ def evaluate_model(models_clf, param_grids, X_train, y_train, X_test, y_test):
         best_model_name = best_clf_model['Model']
         best_model = models_clf[best_model_name].set_params(**best_clf_model['Best Parameters'])
         best_model.fit(X_train, y_train)
-        best_model_predictions = best_model.predict(X_test)   
+        best_model_predictions = best_model.predict(X_test)
+        
+        # The best model is
+        print(f"The best model is {best_clf_model}")
+          
         
         return {"model_list_clf": model_list_clf, 
                 "results_clf": results_clf, 

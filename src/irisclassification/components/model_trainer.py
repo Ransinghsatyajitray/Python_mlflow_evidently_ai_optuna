@@ -1,5 +1,5 @@
-# import pandas as pd
-# import numpy as np
+import pandas as pd
+import numpy as np
 import os
 import sys
 from src.irisclassification.logger import logging
@@ -21,7 +21,7 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
     
-    def initiate_model_training(self, train_array, test_array):
+    def initiate_model_training(self, train_array, test_array):     # this will be taking input from data transformation array outputs
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
             X_train, y_train, X_test, y_test = (
@@ -30,7 +30,9 @@ class ModelTrainer:
                 test_array[:,:-1],
                 test_array[:,-1]
             )
-
+            
+            
+            # the classification models we will be using
             models = {
             'SVC': SVC(),
             'RandomForestClassifier': RandomForestClassifier()
@@ -43,18 +45,11 @@ class ModelTrainer:
             
             # evaluate model is from utils
             model_report = evaluate_model(models, param_grids, X_train, y_train, X_test, y_test)
-            print(model_report)
-            print('\n====================================================================================\n')
-            logging.info(f'Model Report : {model_report}')
-
 
             # best model and parameters
             best_model_report = model_report["best_clf_model"]
 
-
-            print(f'Best Model Found , Model Name : {best_model_report["best_clf_model"]["Model"]} , F1 Score : {best_model_report["best_clf_model"]["F1 Score"]}') # classification scores
-            print('\n====================================================================================\n')
-            logging.info(f'Best Model Found , Model Name : {best_model_report["best_clf_model"]["Model"]} , F1 Score : {best_model_report["best_clf_model"]["F1 Score"]}') # log the classification scores
+            logging.info(f'Best Model Found , Model Name : {best_model_report}') # log the classification scores
 
             # from the utils.py (utility)
             save_object(
@@ -64,7 +59,7 @@ class ModelTrainer:
 
         except Exception as e:
             logging.info('Exception occured at Model Training')
-            raise customexception(e,sys)
+            raise customexception(e, sys)
 
         
     

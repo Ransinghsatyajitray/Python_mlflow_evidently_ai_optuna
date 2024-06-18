@@ -26,7 +26,7 @@ class DataTransformation:
 
         
     
-    def get_data_transformation(self,train_path):
+    def get_data_transformation(self, train_path):
         
         try:
             logging.info('Data Transformation initiated')
