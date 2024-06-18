@@ -34,7 +34,7 @@ class DataTransformation:
             logging.info('Pipeline Initiated')
             
             # Defining the numeric columns
-            numerical_col = list(pd.read_csv(train_path).drop(["Species"], axis=1).select_dtypes(exclude="object").columns())
+            numerical_cols = list(pd.read_csv(train_path).drop(["Species"], axis=1).select_dtypes(exclude="object").columns)
             
             logging.info('Pipeline initiated')
             

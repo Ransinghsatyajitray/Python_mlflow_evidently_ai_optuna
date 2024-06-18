@@ -14,6 +14,8 @@ from sklearn.metrics import (
     roc_auc_score
 )
 
+from sklearn.model_selection import GridSearchCV
+
 def save_object(file_path, obj):
     try:
         # getting the artifact folder
