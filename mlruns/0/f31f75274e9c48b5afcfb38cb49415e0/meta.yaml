@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f31f75274e9c48b5afcfb38cb49415e0/artifacts
+end_time: 1718778702269
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f31f75274e9c48b5afcfb38cb49415e0
+run_name: serious-gull-115
+run_uuid: f31f75274e9c48b5afcfb38cb49415e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718778702197
+status: 3
+tags: []
+user_id: Ransingh
