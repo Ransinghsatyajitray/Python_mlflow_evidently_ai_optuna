@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0034152697744835958cb0fc24e720ff/artifacts
+end_time: 1718783166876
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0034152697744835958cb0fc24e720ff
+run_name: ambitious-yak-531
+run_uuid: 0034152697744835958cb0fc24e720ff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718783166809
+status: 3
+tags: []
+user_id: Ransingh

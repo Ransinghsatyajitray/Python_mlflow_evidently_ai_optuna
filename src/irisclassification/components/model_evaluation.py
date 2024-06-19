@@ -11,7 +11,6 @@ from urllib.parse import urlparse
 import mlflow
 import mlflow.sklearn
 import numpy as np
-import pickle
 from src.irisclassification.utils.utils import load_object
 import pickle
 
@@ -35,16 +34,6 @@ class ModelEvaluation:
             model_path=os.path.join("artifacts","model.pkl")
             model=load_object(model_path)
 
-        
-
-            # mlflow.set_registry_uri("https://dagshub.com/ransingh.satyajit/endtoend.mlflow")
-            
-            #tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-            
-            #print(tracking_url_type_store)
-
-
-
             with mlflow.start_run():
                 
 
@@ -59,22 +48,8 @@ class ModelEvaluation:
                 mlflow.log_metric("recall", recall)
                 
                 mlflow.log_param("model_name", type(model).__name__)
+                mlflow.log_param("parameters", model.get_params())
 
 
-
-                """
-                # this condition is for the dagshub
-                # Model registry does not work with file store
-                if tracking_url_type_store != "file":
-
-                    # Register the model
-                    # There are other ways to use the Model Registry, which depends on the use case,
-                    # please refer to the doc for more information:
-                    # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-                    mlflow.sklearn.log_model(model, "model", registered_model_name="ml_model")
-                # it is for the local 
-                else:
-                    mlflow.sklearn.log_model(model, "model")
-                """            
         except Exception as e:
             raise e
