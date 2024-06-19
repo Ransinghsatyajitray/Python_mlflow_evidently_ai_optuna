@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/708254caf2124b87897469c88d80537f/artifacts
+end_time: 1718778081812
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 708254caf2124b87897469c88d80537f
+run_name: omniscient-stork-154
+run_uuid: 708254caf2124b87897469c88d80537f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718778081385
+status: 4
+tags: []
+user_id: Ransingh
