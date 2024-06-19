@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/69631dd1c66a422f9a8377319f5afba0/artifacts
+end_time: 1718775627279
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 69631dd1c66a422f9a8377319f5afba0
+run_name: illustrious-deer-637
+run_uuid: 69631dd1c66a422f9a8377319f5afba0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718775627237
+status: 4
+tags: []
+user_id: Ransingh

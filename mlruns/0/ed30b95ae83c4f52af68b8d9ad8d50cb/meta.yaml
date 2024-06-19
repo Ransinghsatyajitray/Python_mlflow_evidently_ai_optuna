@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ed30b95ae83c4f52af68b8d9ad8d50cb/artifacts
+end_time: 1718776196914
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ed30b95ae83c4f52af68b8d9ad8d50cb
+run_name: resilient-skink-678
+run_uuid: ed30b95ae83c4f52af68b8d9ad8d50cb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718776196474
+status: 3
+tags: []
+user_id: Ransingh

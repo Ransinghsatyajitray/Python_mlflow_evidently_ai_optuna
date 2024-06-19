@@ -14,5 +14,4 @@ FastAPI
 optuna
 nbformat # required for visualization using optuna
 
-
 -e .

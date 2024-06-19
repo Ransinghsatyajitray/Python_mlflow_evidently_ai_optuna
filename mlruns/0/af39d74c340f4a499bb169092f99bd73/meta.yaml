@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/af39d74c340f4a499bb169092f99bd73/artifacts
+end_time: 1718777023985
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: af39d74c340f4a499bb169092f99bd73
+run_name: mysterious-crow-330
+run_uuid: af39d74c340f4a499bb169092f99bd73
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718777023625
+status: 4
+tags: []
+user_id: Ransingh

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/21553737c0f94f82937db4049d96452b/artifacts
+end_time: 1718775844888
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 21553737c0f94f82937db4049d96452b
+run_name: rebellious-dog-650
+run_uuid: 21553737c0f94f82937db4049d96452b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718775838344
+status: 4
+tags: []
+user_id: Ransingh
