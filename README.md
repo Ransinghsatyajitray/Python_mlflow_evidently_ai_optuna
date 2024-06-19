@@ -15,3 +15,7 @@ Randomsearchcv, gridsearchcv work well when we have smaller no of parameters to 
 5. Repeat steps 2-4 until max iterations or time is reached.
 
 We always define an objective function
+
+
+building the docker : docker build -t ml_model2 .
+running the docker container: docker run -p 5000:5000 ml_model2

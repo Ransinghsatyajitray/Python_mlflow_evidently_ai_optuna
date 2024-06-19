@@ -2,6 +2,7 @@ FROM python:3.10.14-bullseye
 WORKDIR /app
 COPY . /app
 RUN apt update -y
-RUN apt-get update && pip install -r requirements.txt
+RUN pip install -r requirements.txt
+EXPOSE 5000
 CMD ["python3", "app.py"]
 
