@@ -16,6 +16,13 @@ Randomsearchcv, gridsearchcv work well when we have smaller no of parameters to 
 
 We always define an objective function
 
+For running the application locally outside the docker container, 
+python app.py
+
+see using:
+http://localhost:5000/predict
+
+
 
 building the docker : docker build -t ml_model2 .
 running the docker container: docker run -p 5000:5000 ml_model2
